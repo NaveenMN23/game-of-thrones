@@ -1,0 +1,13 @@
+.card-body{
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+    font-family: sans-serif;
+}
+.goBack{
+    margin-top:10px;
+}
+.detailHeader{
+    font-size: 36px;
+    text-align: center;
+    font-family: sans-serif;
+}

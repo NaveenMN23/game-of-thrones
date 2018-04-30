@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row" *ngIf='getalldata.length > 0 && getalldata != undefined'>
+    <div *ngFor='let data of getalldata'>
+      <div class="col-sm-4" *ngIf='data.url.includes("characters")'>
+        <div class="card-title card characters" [routerLink]='["/detail",data.url]'>{{data.aliases[0]}}</div>
+      </div>
+      <div class="col-sm-4" *ngIf='data.url.includes("books")'>
+        <div class="card-title card books" [routerLink]='["/detail",data.url]'>{{data.name}}</div>
+      </div>
+      <div class="col-sm-4" *ngIf='data.url.includes("houses")'>
+        <div class="card-title card houses" [routerLink]='["/detail",data.url]'>{{data.name}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 aligntop">
+      <div class="box red">Books are in Red</div>
+      <div class="box green">Houses are in Green</div>
+      <div class="box blue">Characters are in Blue</div>
+    </div>
+  </div>
+</div>

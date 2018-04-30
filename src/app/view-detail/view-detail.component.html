@@ -1,0 +1,159 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 quote" id="userQuote">
+        <div class="detailHeader">Details</div>
+        <div class="accordion" id="accordion3">
+          <div class="card" *ngIf='getalldata != undefined'>
+            <div class="card-header" *ngIf='getalldata.name != ""&& getalldata.name != undefined '>
+              {{getalldata.name}}
+            </div>
+            <div class="card-header" *ngIf='getalldata.aliases != ""&& getalldata.aliases != undefined && (getalldata.name == "" || getalldata.name == undefined)'>
+              <div *ngFor='let data of getalldata.aliases'>
+                {{data}}
+              </div>
+            </div>
+  
+            <div class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body" *ngIf='getalldata.coatOfArms != "" && getalldata.coatOfArms != undefined'>
+                Coat Of Arms: {{getalldata.coatOfArms}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.region != "" && getalldata.region != undefined'>
+                Region: {{getalldata.region}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.words != "" && getalldata.words != undefined'>
+                Words: {{getalldata.words}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.diedOut != ""&& getalldata.diedOut != undefined'>
+                Died out: {{getalldata.diedOut}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.founded != ""&& getalldata.founded != undefined'>
+                Founded: {{getalldata.founded}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.heir != ""&& getalldata.heir != undefined'>
+                Heir: <a [routerLink] = '["/view",getalldata.heir]'>{{getalldata.heir}}</a>
+              </div>
+              <div class="card-body" *ngIf='getalldata.overlord != ""&& getalldata.overlord != undefined'>
+                Over Lord: <a [routerLink] = '["/view",getalldata.overlord]'>{{getalldata.overlord}}</a>
+              </div>
+              <div class="card-body" *ngIf='getalldata.currentLord != ""&& getalldata.currentLord != undefined'>
+                Current Lord: <a [routerLink] = '["/view",getalldata.currentLord]'>{{getalldata.currentLord}}</a>
+              </div>
+              <div class="card-body" *ngIf='getalldata.ancestralWeapons != ""&& getalldata.ancestralWeapons != undefined '>
+                Ancestral Weapons:
+                <div *ngFor='let data of getalldata.ancestralWeapons'>
+                  {{data}}
+                </div>
+              </div>
+              <div class="card-body" *ngIf='getalldata.seats != ""&& getalldata.seats != undefined '>
+                Seats:
+                <div *ngFor='let data of getalldata.seats'>
+                  {{data}}
+                </div>
+              </div>
+              <div class="card-body" *ngIf='getalldata.swornMembers != ""&& getalldata.swornMembers != undefined'>
+                Sworn Members:
+                <div *ngFor='let data of getalldata.swornMembers'>
+                  <a [routerLink]='["/view",data]'> {{data}}</a>
+                </div>
+              </div>
+              <div class="card-body" *ngIf='getalldata.titles != ""&& getalldata.titles != undefined '>
+                Titles:
+                <div *ngFor='let data of getalldata.titles'>
+                  {{data}}
+                </div>
+              </div>
+  
+              <div class="card-body" *ngIf='getalldata.allegiances != ""&& getalldata.allegiances != undefined '>
+                Allengiances:
+                <div *ngFor='let data of getalldata.allegiances'>
+                    <a [routerLink]='["/view",data]'>{{data}}</a>
+                </div>
+              </div>
+              <div class="card-body" *ngIf='getalldata.books != ""&& getalldata.books != undefined '>
+                Books:
+                <div *ngFor='let data of getalldata.books'>
+                  <a [routerLink]='["/view",data]'>{{data}}</a>
+                </div>
+              </div>
+              <div class="card-body" *ngIf='getalldata.playedBy != ""&& getalldata.playedBy != undefined '>
+                Played by:
+                <div *ngFor='let data of getalldata.playedBy'>
+                  {{data}}
+                </div>
+              </div>
+              <div class="card-body" *ngIf='getalldata.povBooks != ""&& getalldata.povBooks != undefined '>
+                Pov Books:
+                <div *ngFor='let data of getalldata.povBooks'>
+                  {{data}}
+                </div>
+              </div>
+              <div class="card-body" *ngIf='getalldata.tvSeries != ""&& getalldata.tvSeries != undefined '>
+                TV Series:
+                <div *ngFor='let data of getalldata.tvSeries'>
+                  {{data}}
+                </div>
+              </div>
+              <div class="card-body" *ngIf='getalldata.born != ""&& getalldata.born != undefined'>
+                Born: {{getalldata.born}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.culture != ""&& getalldata.culture != undefined'>
+                Culture: {{getalldata.culture}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.died != ""&& getalldata.died != undefined'>
+                Died: {{getalldata.died}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.father != ""&& getalldata.father != undefined'>
+                Father: {{getalldata.father}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.mother != ""&& getalldata.mother != undefined'>
+                Mother: {{getalldata.mother}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.gender != ""&& getalldata.gender != undefined'>
+                Gender: {{getalldata.gender}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.spouse != ""&& getalldata.spouse != undefined'>
+                Spouse: {{getalldata.spouse}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.country != ""&& getalldata.country != undefined'>
+                Country: {{getalldata.country}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.isbn != ""&& getalldata.isbn != undefined'>
+                ISBN: {{getalldata.isbn}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.mediaType != ""&& getalldata.mediaType != undefined'>
+                Media type: {{getalldata.mediaType}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.numberOfPages != ""&& getalldata.numberOfPages != undefined'>
+                Number of pages: {{getalldata.numberOfPages}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.publisher != ""&& getalldata.publisher != undefined'>
+                Publisher: {{getalldata.publisher}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.released != ""&& getalldata.released != undefined'>
+                Released: {{getalldata.released}}
+              </div>
+              <div class="card-body" *ngIf='getalldata.authors != ""&& getalldata.authors != undefined && getalldata.authors.length > 0'>
+                Authors:
+                <div *ngFor='let data of getalldata.authors'>
+                  {{data}}
+                </div>
+              </div>
+              <div class="card-body" *ngIf='getalldata.characters != ""&& getalldata.characters != undefined && getalldata.characters.length > 0'>
+                Characters:
+                <div *ngFor='let data of getalldata.characters'>
+                  <a [routerLink]='["/view",data]'>{{data}}</a>
+                </div>
+              </div>
+              <div class="card-body" *ngIf='getalldata.povCharacters != ""&& getalldata.povCharacters != undefined && getalldata.povCharacters.length > 0'>
+                Pov Characters:
+                <div *ngFor='let data of getalldata.povCharacters'>
+                    <a [routerLink]='["/view",data]'>{{data}}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="btn btn-info goBack" (click)="goBackLocation()">Go Back</a>
+      </div>
+    </div>
+  </div>
